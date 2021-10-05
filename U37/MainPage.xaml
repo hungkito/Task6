@@ -1,0 +1,122 @@
+﻿<Page
+    x:Class="U37.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:U37"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!--U37-->
+    <!--<Grid Name="ColorGrid">
+        <TextBlock Name="MessageTextBlock" Text="Hello VisualStateManager"/>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="VisualStatePhone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ColorGrid.Background" Value="red" />
+                        <Setter Target="MessageTextBlock.FontSize" Value="18"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="VisualStateTablet">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ColorGrid.Background" Value="Yellow"/>
+                        <Setter Target="MessageTextBlock.FontSize" Value="36"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="VisualStateDesktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ColorGrid.Background" Value="Blue"/>
+                        <Setter Target="MessageTextBlock.FontSize" Value="54"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>-->
+    
+    <!--U38-->
+    <!--<Grid Name="LayoutRoot">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="First.(Grid.Row)" Value="0"/>
+                        <Setter Target="First.(Grid.Column)" Value="0"/>
+                        <Setter Target="Second.(Grid.Row)" Value="0"/>
+                        <Setter Target="Second.(Grid.Column)" Value="1"/>
+                        <Setter Target="Third.(Grid.Row)" Value="0"/>
+                        <Setter Target="Third.(Grid.Column)" Value="2"/>
+
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="First.(Grid.Row)" Value="0"/>
+                        <Setter Target="First.(Grid.Column)" Value="0"/>
+                        <Setter Target="Second.(Grid.Row)" Value="0"/>
+                        <Setter Target="Second.(Grid.Column)" Value="1"/>
+                        <Setter Target="Third.(Grid.Row)" Value="0"/>
+                        <Setter Target="Third.(Grid.Column)" Value="2"/>
+
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Name="First" Margin="20,20,0,0">
+                    <Image Source="Assets/Tibbles.jpg"  HorizontalAlignment="Left"/>
+                    <TextBlock>Information on my cat, Mr. Tibbles</TextBlock>
+                </StackPanel>
+                <StackPanel Name="Second" Grid.Row="1" Margin="20,20,0,0">
+                    <TextBlock TextWrapping="Wrap">
+                        Below thou condole minstrels in were domestic him rhyme not agen this to uncouth did wassailers sad dwelt loved nor
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Third" Grid.Row="2" Margin="20,20,0,0">
+                    <TextBlock TextWrapping="Wrap">
+                        The dwell the them befell vast bacchanals land know which seraphs all that land ancient mighty dwell oh which worse
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>-->
+</Page>
