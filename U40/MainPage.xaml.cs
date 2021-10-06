@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using U40.Models;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -23,14 +24,35 @@ namespace U40
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private List<Book> Books;
+        //private List<Book> Books;
         private List<Icon> Icons;
         private ObservableCollection<Contact> Contacts;
 
         public MainPage()
         {
             this.InitializeComponent();
-            Books = BookManager.GetBooks();
+            //Books = BookManager.GetBooks();
+            Icons = new List<Icon>();
+            Icons.Add(new Icon { IconPath = "Assets/male-01.png" });
+            Icons.Add(new Icon { IconPath = "Assets/male-02.png" });
+            Icons.Add(new Icon { IconPath = "Assets/male-03.png" });
+            Icons.Add(new Icon { IconPath = "Assets/female-01.png" });
+            Icons.Add(new Icon { IconPath = "Assets/female-02.png" });
+            Icons.Add(new Icon { IconPath = "Assets/female-03.png" });
+
+            Contacts = new ObservableCollection<Contact>();
+        }
+
+        private void NewContactButton_Click(object sender, RoutedEventArgs e)
+        {
+            string avatar = ((Icon)AvatarComboBox.SelectedValue).IconPath;
+            Contacts.Add(new Contact { FirstName = FirstNameTexBox.Text, LastName = LastNameTexBox.Text, AvatarPath = avatar});
+
+            FirstNameTexBox.Text = "";
+            LastNameTexBox.Text = "";
+            AvatarComboBox.SelectedIndex = -1;
+
+            FirstNameTexBox.Focus(FocusState.Programmatic);
         }
 
         //private void GridView_ItemClick(object sender, ItemClickEventArgs e)

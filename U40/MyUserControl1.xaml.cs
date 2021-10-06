@@ -26,11 +26,11 @@ namespace U40
 
         public Models.Contact Contact { get { return this.DataContext as Models.Contact; } }
 
-        public ContactTemplate()
-        {
-            this.InitializeComponent();
+        //public ContactTemplate()
+        //{
+        //    this.InitializeComponent();
 
-            this.DataContextChanged += (s, e) => Binding.Update();
-        }
+        //    this.DataContextChanged += (s, e) => Binding.Update();
+        //}
     }
 }

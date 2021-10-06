@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace U40.Models
 {
-    class Contact
+    public class Contact
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string AvatarPath { get; set; }
     }
 }
